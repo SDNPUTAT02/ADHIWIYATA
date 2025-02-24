@@ -1,0 +1,192 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Section */
+.hero {
+    background: linear-gradient(rgba(55, 211, 88, 0.6), rgba(0, 0, 0, 0.6)), url('fotobackground-edit.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 20px 20px;
+}
+
+.hero-content .logo {
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 500px; /* Sesuaikan tinggi agar tidak terlalu kecil */
+    overflow: hidden;
+}
+
+/* Setiap slide */
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+/* Efek transisi untuk tampilan lebih halus */
+.fade {
+    animation: fadeEffect 1.5s ease-in-out;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0.5; }
+    to { opacity: 1; }
+}
+
+/* Kontainer teks di dalam slide */
+.slide-content {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    width: 80%;
+}
+
+/* Tombol navigasi sebelumnya & selanjutnya */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsif untuk layar lebih kecil */
+@media screen and (max-width: 768px) {
+    .slideshow-container {
+        height: 300px; /* Sesuaikan tinggi untuk perangkat mobile */
+    }
+    
+    .slide-content {
+        width: 90%;
+        font-size: 14px;
+    }
+    
+    .prev, .next {
+        font-size: 18px;
+        padding: 8px;
+    }
+}
+
+
+/* Info Section */
+.info {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #e8f5e9;
+    color: #4CAF50;
+    border-top: 4px solid #4CAF50;
+}
+
+.info h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.info p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Activity Grid */
+.activities {
+    padding: 40px 20px;
+}
+
+.activities h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #4CAF50;
+}
+
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.activity {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.activity:hover {
+    transform: translateY(-10px);
+}
+
+.activity img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.activity h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #4CAF50;
+}
+
+.activity p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 0.9rem;
+}
